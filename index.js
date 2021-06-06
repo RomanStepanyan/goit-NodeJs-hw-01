@@ -1,5 +1,3 @@
-// console.log(123456789);
-
 const {
   listContacts,
   getContactById,
@@ -7,10 +5,6 @@ const {
   addContact,
   contactsPath,
 } = require("./contacts.js");
-// console.log(listContacts());
-// console.log(getContactById(5));
-// console.log(removeContact(10));
-// console.log(addContact("Mango", "mango@gmail.com", "322-22-22"));
 
 const { Command } = require("commander");
 const program = new Command();
@@ -25,7 +19,6 @@ program.parse(process.argv);
 
 const argv = program.opts();
 
-// TODO: рефакторить
 function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
